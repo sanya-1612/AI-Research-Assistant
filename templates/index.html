@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Research Assistant</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="header">
+
+        <h1>🤖 AI Research Assistant</h1>
+
+        <p>Powered by <b>Google Gemini 2.5 Flash</b></p>
+
+        <p class="subtitle">
+            Ask research questions and generate structured AI reports instantly.
+        </p>
+
+    </div>
+
+    <!-- Suggested Topics -->
+
+    <div class="topics">
+
+        <button class="topic">Artificial Intelligence</button>
+        <button class="topic">Machine Learning</button>
+        <button class="topic">Blockchain</button>
+        <button class="topic">Cyber Security</button>
+        <button class="topic">Cloud Computing</button>
+        <button class="topic">Data Science</button>
+
+    </div>
+
+    <div class="chat-box">
+
+        <div class="user-card">
+
+            <div class="chat-title">
+                👤 Your Question
+            </div>
+
+            <textarea
+                id="question"
+                placeholder="Ask anything related to research..."></textarea>
+
+            <button id="askBtn">
+                🚀 Ask AI
+            </button>
+
+        </div>
+
+        <div class="ai-card">
+
+            <div class="chat-title">
+                🤖 AI Research Result
+            </div>
+
+            <div id="answer" class="answer-box">
+
+                <div class="placeholder">
+
+                    <i class="fa-solid fa-robot"></i>
+
+                    <h3>Ready to Help!</h3>
+
+                    <p>
+                        Enter your research question and click
+                        <b>Ask AI</b>.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="buttons">
+
+        <button id="copyBtn">
+            📋 Copy Answer
+        </button>
+
+        <button id="pdfBtn">
+            📄 Download PDF
+        </button>
+
+    </div>
+
+    <footer>
+
+        AI Research Assistant • Flask • Gemini AI • 2026
+
+    </footer>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>
